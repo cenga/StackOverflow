@@ -1,0 +1,143 @@
+﻿.pitanjeTextBox
+{
+	font-family: sans-serif;
+	padding: 2px;
+	border: 0px;
+	font-size: 15px;
+	width: 100%;
+	background-color: whitesmoke;
+	resize: none;
+	height: 250px; 
+}
+.tacnoSlika
+{
+    width: 50px;
+    height: 50px;
+}
+.tacan
+{
+    background-color: greenyellow;
+}
+.likesSlika
+{
+    width: 15px;
+    height: 10px;
+}
+.numberOfDislikes
+{
+	color: red;
+	/*bold*/
+}
+.numberOfLikes
+{
+	color: blue;
+	/*bold*/
+}
+.points
+{
+	display: inline;
+	float: right;
+}
+.comments
+{
+	padding-left: 10%;
+	width: 60%;
+}
+.main
+{
+    float: left;
+    width: 70%;
+}
+.comment
+{
+	padding: 0px;
+	font-size: 12px;
+}
+.userSlika
+{
+    width: 30px;
+    height: 25px;
+}
+.slika
+{
+    float: right;
+    width: 28%;
+    padding-left: 2%;
+    padding-bottom: 15px;
+}
+.linijaKomentar
+{
+	padding: 0px;
+	margin-bottom: -10px;
+	font-size: 10px;
+}
+.question
+{
+	width: 100%;
+}
+.ikone
+{
+	width: 10%;	
+}
+body
+{
+	width: 80%;
+	margin: auto;
+}
+#as
+{
+    width: 100%;
+}
+.menu
+{
+	display: inline-block;
+	background-color: silver;
+	padding-bottom: 10px;
+	width: 100%;
+}
+footer.table
+{
+    width: 100%;
+}
+.gornjiHr
+{
+	border: 2px solid maroon;
+}
+.menu a
+{
+	padding-right: 5%;
+	font-family: cursive;
+	font-size: 20px;
+	padding-left: 3px;
+}
+footer
+{
+	clear: both;
+}
+.partial
+{
+    height:15%;
+    background-color:silver;
+    margin-bottom: -22px;
+}
+#search
+{
+   width:200px;
+}
+.naslov
+{
+    color:cornflowerblue;
+    font-family:Algerian;
+	clear: left;
+}
+.desno
+{
+    float:right;
+    padding:1px;
+    width:100px;
+    margin:10px;
+}
+.linija
+{
+    border: 2px solid maroon;
+}

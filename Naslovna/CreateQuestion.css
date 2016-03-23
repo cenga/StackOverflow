@@ -1,0 +1,106 @@
+﻿select
+{
+    width: 7%;
+}
+.ikone
+{
+	width: 10%;	
+}
+.ft
+{
+    width: 30%;
+	padding-left: 2%;
+}
+footer.table
+{
+    width: 100%;
+}
+.fr
+{
+    width: 100%;
+}
+.checkbox
+{
+    list-style: none;
+}
+.pitanjeTextBox
+{
+    height: 150px;
+    width: 80%;
+}
+.pitanjeTextBox
+{
+	font-family: sans-serif;
+	padding: 3px;
+}
+#submit
+{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+.pitanje
+{
+	margin-left: 5px;
+}
+#naslov
+{
+	padding-top: 2px;
+	margin-top: 5px;
+}
+body
+{
+	width: 80%;
+	margin: auto;
+}
+.partial
+{
+   height:15%;
+   background-color:silver;
+   margin-bottom: -22px;
+}
+form
+{
+	background-color: aliceblue;
+}
+footer
+{
+	clear: both;
+}
+#search
+    {
+       width:200px;
+    }
+.naslov {
+    color: cornflowerblue;
+    font-family: Algerian;
+}
+.desno {
+    float: right;
+    padding: 1px;
+    width: 100px;
+    margin: 10px;
+}
+#logo {
+    width: 20%;
+    height: 15%;
+    margin: 5px;
+}
+.menu
+{
+	display: inline-block;
+	background-color: silver;
+	padding-bottom: 10px;
+	width: 100%;
+}
+.menu a
+{
+	padding-right: 5%;
+	font-family: cursive;
+	font-size: 20px;
+	padding-left: 3px;
+}
+hr
+{
+    border: 2px solid maroon;
+}

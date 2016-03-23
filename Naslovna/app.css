@@ -1,0 +1,162 @@
+﻿.gornjiHr
+{
+	border: 2px solid maroon;
+}
+.novost
+{
+	display: inline;
+	width: 600px;
+}
+.broj
+{
+	padding-right: 3%;
+	width: 5%;
+}
+footer.table
+{
+    width: 100%;
+}
+.pitanje
+{
+	display: inline-block;
+	width:400px;
+	padding-left: 10px;
+}
+.userSlika
+{
+	width: 30px;
+	height: 25px;
+}
+.skill
+{
+	width: 20%;
+	text-align: right;
+	padding-left: 60px;
+	display: inline-block;
+}
+.novosti
+{
+	width: 70%;
+	float: left;
+}
+.ikone
+{
+	width: 10%;	
+}
+.ft
+{
+    width: 30%;
+	padding-left: 2%;
+}
+.fr
+{
+    width: 100%;
+}
+.pitanja
+{
+   width:60%;
+}
+body
+{
+	width: 80%;
+	margin: auto;
+}
+.menu
+{
+	display: inline-block;
+	background-color: silver;
+	padding-bottom: 10px;
+	width: 100%;
+}
+.menu a
+{
+	padding-right: 5%;
+	font-family: cursive;
+	font-size: 20px;
+	padding-left: 3px;
+}
+#mva:hover
+{
+	list-style-image: url(https://cdn0.iconfinder.com/data/icons/super-mono-reflection/blue/button-check_blue.png);
+}
+#plural:hover
+{
+	list-style-image: url(https://cdn3.iconfinder.com/data/icons/developperss/PNG/Orange%20Ball.png);
+}
+#azure:hover
+{
+	list-style-image: url(https://acom.azurecomcdn.net/80C57D/cdn/mediahandler/docarticles/dpsmedia-prod/azure.microsoft.com/en-us/documentation/articles/storsimple-deployment-walkthrough-gov/20160224060753/includes/storsimple-get-service-registration-key-gov/hcs_quickstarticon-include.png);
+}
+#vs:hover
+{
+	list-style-image: url(https://cdn3.iconfinder.com/data/icons/developperss/PNG/Purple%20Ball.png);
+}
+#windows:hover
+{
+	list-style-image: url(http://res1.windows.microsoft.com/resbox/en/6.4/main/851aefc6-d9e7-41b6-a160-2a5e45499b33_17.png);
+}
+#office:hover
+{
+	list-style-image: url(https://cdn0.iconfinder.com/data/icons/FileTypesIcons/16/pptx_mac.png);
+}
+.linkovi
+{
+	float: right;
+	width: 30%;
+	list-style-position: inside;
+	list-style-type: none;
+}
+.linkovi li
+{
+	background-color: aliceblue;
+	list-style-type: none;
+    padding-bottom: 20px;
+}
+#w3:hover
+{
+	list-style-image: url(https://addons.cdn.mozilla.net/user-media/addon_icons/406/406076-64.png?modified=1352251223);
+}
+footer
+{
+	clear: both;
+}
+   td
+   {
+       margin:5%;
+       padding-right:5%;
+   }
+    .partial
+    {
+        height:15%;
+        background-color:silver;
+        margin-bottom: -22px;
+    }
+    #logo
+    {
+        width: 150px;
+        height:60px;;
+        margin:5px;
+		float: left;
+    }
+    #search
+    {
+       width:200px;
+    }
+    .naslov
+    {
+        color:cornflowerblue;
+        font-family:Algerian;
+		clear: left;
+    }
+    .desno
+    {
+        float:right;
+        padding:1px;
+        width:100px;
+        margin:10px;
+    }
+header
+{
+	margin-bottom: -15px;
+	height: 150px;
+}

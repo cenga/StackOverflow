@@ -1,0 +1,100 @@
+﻿.ikone
+{
+	width: 10%;	
+}
+body
+{
+	width: 80%;
+	margin: auto;
+}
+#as
+{
+    width: 100%;
+}
+.menu
+{
+	display: inline-block;
+	background-color: silver;
+	padding-bottom: 10px;
+	width: 100%;
+}
+footer.table
+{
+    width: 100%;
+}
+.gornjiHr
+{
+	border: 2px solid maroon;
+}
+form
+{
+	width: 30%;
+	margin: auto;
+	background-color: aliceblue;
+	border: 2px solid;
+	margin-bottom: 20px;
+	align-content: center;
+}
+#lpw, #lusername
+{
+	padding-left: 5px;
+}
+#submit
+{
+	margin: 5px;
+	width: 80px;
+	float: right;
+}
+.naslovForme
+{
+	text-align: center;
+	background-color: silver;
+	border-bottom: black 2px solid;
+	margin-top: 0px;
+	height: 30px;
+	color: blue;
+	font-family: cursive;
+	font-size: 20px;
+}
+#pw
+{
+	margin: 5px;
+}
+#username
+{
+	margin: 5px;
+}
+.menu a
+{
+	padding-right: 5%;
+	font-family: cursive;
+	font-size: 20px;
+	padding-left: 3px;
+}
+footer
+{
+	clear: both;
+}
+.partial
+{
+    height:15%;
+    background-color:silver;
+    margin-bottom: -22px;
+}
+#search
+{
+   width:200px;
+}
+.naslov
+{
+    color:cornflowerblue;
+    font-family:Algerian;
+	clear: left;
+}
+.desno
+{
+    float:right;
+    padding:1px;
+    width:100px;
+    margin:10px;
+}

@@ -1,0 +1,115 @@
+﻿.ikone
+{
+	width: 10%;	
+}
+footer.table
+{
+    width: 100%;
+}
+#as
+{
+    width: 100%;
+}
+body
+{
+	width: 80%;
+	margin: auto;
+}
+.menu
+{
+	display: inline-block;
+	background-color: silver;
+	padding-bottom: 10px;
+	width: 100%;
+}
+.gornjiHr
+{
+	border: 2px solid maroon;
+}
+.menu a
+{
+	padding-right: 5%;
+	font-family: cursive;
+	font-size: 20px;
+	padding-left: 3px;
+}
+.pitanje
+{
+	display: block;
+    border: 1px solid;
+}
+.skill
+{
+	border: 1px solid;
+	width: 30%;
+}
+.broj
+{
+    width:5%;
+    border: 1px solid;
+}
+.odgovori
+{
+    width:5%;
+    border: 1px solid;
+}
+.likes
+{
+    width:5%;
+    border: 1px solid;
+}
+.parni
+{
+    text-align: center;
+    background-color:Highlight;
+}
+.neparni
+{
+    text-align: center;
+    background-color: cornflowerblue;
+}
+.tabela
+{
+    border: 1px solid;
+    border-collapse:collapse;
+}
+.headerTabele
+{
+    background-color:dodgerblue;
+}
+footer
+{
+	clear: both;
+}
+.partial
+{
+    height:15%;
+    background-color:silver;
+    margin-bottom: -22px;
+}
+#search
+{
+   width:200px;
+}
+.naslov
+{
+    color:cornflowerblue;
+    font-family:Algerian;
+	clear: left;
+}
+.desno
+{
+    float:right;
+    padding:1px;
+    width:100px;
+    margin:10px;
+}
+.tabelaInformacije
+{
+    width: 50%;
+}
+.informacije
+{
+    background-color: azure;
+    width: 100%;
+}
