@@ -4,9 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="app.css" type="text/css" />
+    <script src="index.js"></script>
     <title>Početna</title>
 </head>
-<body>
+<body onload="seed()">
     <header class="partial">
 
         <div class="logo">
@@ -35,11 +36,23 @@
 
         <hr class="gornjiHr" />
         <h2>Najnovija pitanja</h2>
+
+        <select id="select">
+            <option>Sve novosti</option>
+            <option>Danasnje novosti</option>
+            <option>Novosti ove sedmice</option>
+            <option>Novosti ovog mjeseca</option>
+        </select>
+        <input type="button" onclick="Filtriraj()" value="Filtriraj" />
+
         <div class="novosti">
             <div class="novost">
                 <span class="broj">1. </span>
                 <a href="ViewProfile.html"><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
-                <span class='pitanje'><a href="ViewQuestion.html">How can I exit a promise sequence when the array has been processed?</a></span>
+                <span class='pitanje'>
+                    <a href="ViewQuestion.html">How can I exit a promise sequence when the array has been processed?</a> <br />
+                    <span class="datum"></span>
+                </span>
                 <span class="skill">JavaScript, NodeJS</span>
                 <hr>
                 <br>
@@ -48,7 +61,9 @@
             <div class="novost">
                 <span class="broj">2. </span>
                 <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png"  class="userSlika"></a>
-                <span class='pitanje'>Build query with C# mongo driver</span>
+                <span class='pitanje'>Build query with C# mongo driver <br />
+                    <span class="datum"></span>
+                </span>
                 <span class="skill">C#</span>
                 <hr>
                 <br>
@@ -57,7 +72,7 @@
             <div class="novost">
                 <span class="broj">3. </span>
                 <a href=""><img src="https://cdn2.iconfinder.com/data/icons/finance-26/128/finance_-56-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
-                <span class='pitanje'>Angular does not read all headers? Added cross domain header - zero effect, does not even read the cross domain header itself</span>
+                <span class='pitanje'>Angular does not read all headers? Added cross domain header - zero effect, does not even read the cross domain header itself <br /><span class="datum"></span></span>
                 <span class="skill">Angular, JavaScript</span>
                 <hr>
                 <br>
@@ -66,11 +81,84 @@
             <div class="novost">
                 <span class="broj">4. </span>
                 <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/boy-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
-                <span class='pitanje'>MVC6 - Handle unhandled exceptions and still have error page redirection</span>
+                <span class='pitanje'>MVC6 - Handle unhandled exceptions and still have error page redirection<br /><span class="datum"></span></span>
                 <span class="skill">C#, .NET, ASP</span>
                 <hr>
                 <br>
             </div>
+
+            <div class="novost">
+                <span class="broj">5. </span>
+                <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/boy-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
+                <span class='pitanje'>MVC6 - Handle unhandled exceptions and still have error page redirection<br /><span class="datum"></span></span>
+                <span class="skill">C#, .NET, ASP</span>
+                <hr>
+                <br>
+            </div>
+
+            <div class="novost">
+                <span class="broj">6. </span>
+                <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/boy-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
+                <span class='pitanje'>MVC6 - Handle unhandled exceptions and still have error page redirection<br /><span class="datum"></span></span>
+                <span class="skill">C#, .NET, ASP</span>
+                <hr>
+                <br>
+            </div>
+
+            <div class="novost">
+                <span class="broj">7. </span>
+                <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/boy-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
+                <span class='pitanje'>MVC6 - Handle unhandled exceptions and still have error page redirection<br /><span class="datum"></span></span>
+                <span class="skill">C#, .NET, ASP</span>
+                <hr>
+                <br>
+            </div>
+
+            <div class="novost">
+                <span class="broj">8. </span>
+                <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/boy-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
+                <span class='pitanje'>MVC6 - Handle unhandled exceptions and still have error page redirection<br /><span class="datum"></span></span>
+                <span class="skill">C#, .NET, ASP</span>
+                <hr>
+                <br>
+            </div>
+
+            <div class="novost">
+                <span class="broj">9. </span>
+                <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/boy-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
+                <span class='pitanje'>MVC6 - Handle unhandled exceptions and still have error page redirection<br /><span class="datum"></span></span>
+                <span class="skill">C#, .NET, ASP</span>
+                <hr>
+                <br>
+            </div>
+
+            <div class="novost">
+                <span class="broj">10. </span>
+                <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/boy-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
+                <span class='pitanje'>MVC6 - Handle unhandled exceptions and still have error page redirection<br /><span class="datum"></span></span>
+                <span class="skill">C#, .NET, ASP</span>
+                <hr>
+                <br>
+            </div>
+            
+            <div class="novost">
+                <span class="broj">11. </span>
+                <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/boy-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
+                <span class='pitanje'>MVC6 - Handle unhandled exceptions and still have error page redirection<br /><span class="datum"></span></span>
+                <span class="skill">C#, .NET, ASP</span>
+                <hr>
+                <br>
+            </div>
+
+            <div class="novost">
+                <span class="broj">12. </span>
+                <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/boy-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png" class="userSlika"></a>
+                <span class='pitanje'>MVC6 - Handle unhandled exceptions and still have error page redirection<br /><span class="datum"></span></span>
+                <span class="skill">C#, .NET, ASP</span>
+                <hr>
+                <br>
+            </div>
+
         </div>
 
         <div class="linkovi">

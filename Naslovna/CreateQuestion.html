@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="CreateQuestion.css" type="text/css" />
+    <script src="CreateQuestion.js"></script>
     <title>Main page</title>
 </head>
 <body>
@@ -35,7 +36,7 @@
         <hr>
         <form id="createQuestion">
             <label for="naslov">Naslov</label>
-            <input type="text" id="naslov">
+            <input type="text" id="naslov" onkeyup="validirajNaslov()" required>
             <br><br>
             Ovdje napišite pitanje<br>
             <div class="pitanje">

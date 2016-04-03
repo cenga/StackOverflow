@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Login.css" type="text/css" />
+    <script src="Login.js"></script>
     <title>Main page</title>
 </head>
 <body>
@@ -39,12 +40,12 @@
         <table>
             <tr>
                 <td><label for="username" id="lusername">Username</label></td>
-                <td><input type="text" required id="username"></td>
+                <td><input type="text" required id="username" onkeyup="validirajUsername()"></td>
             </tr>
 
             <tr>
                 <td><label for="pw" id="lpw">Password</label></td>
-                <td><input type="password" required id="pw"></td>
+                <td><input type="password" required id="pw" onkeyup="validirajPw()"></td>
             </tr>
             <tr>
                 <td>
@@ -53,7 +54,7 @@
                 </td>
                 </tr>
             <tr>
-                <td colspan="2"><input type="submit" id="submit" value="Login"></td>
+                <td colspan="2"><input type="submit" id="submit" onclick="validiraj()" value="Login"></td>
             </tr>
         </table>
         <br>

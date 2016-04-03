@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Login.css" type="text/css" />
+    <script src="Register.js"></script>
     <title>Main page</title>
 </head>
 <body>
@@ -39,26 +40,26 @@
         <table>
             <tr>
                 <td><label for="ime" id="lime">Ime</label></td>
-                <td><input type="text" required id="ime"></td>
+                <td><input type="text" required id="ime" onkeyup="validirajIme()"></td>
             </tr>
 
             <tr>
-                <td><label for="prezime" id="lprezime">Prezime</label></td>
-                <td><input type="text" required id="prezime"></td>
+                <td><label for="email" id="lprezime">Email</label></td>
+                <td><input type="text" required id="email" onkeyup="validirajEmail()"></td>
             </tr>
 
             <tr>
                 <td><label>Password</label></td>
-                <td><input type="text"></td>
+                <td><input type="password" onkeyup="validirajPw()" id="pw"></td>
             </tr>
 
             <tr>
                 <td><label for="cpw" id="lcpw">Potvrdi password</label></td>
-                <td><input type="password" required id="cpw"></td>
+                <td><input type="password" required id="cpw" onkeyup="validirajCpw()"></td>
             </tr>
 
             <tr>
-                <td colspan="2"><input type="submit" id="submit" value="Potvrdi"></td>
+                <td colspan="2"><input type="submit" id="submit" value="Potvrdi" onclick="validiraj()"></td>
             </tr>
 
         </table>
