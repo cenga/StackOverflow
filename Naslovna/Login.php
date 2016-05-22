@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Login.css" type="text/css" />
     <script src="Login.js"></script>
+    <link href="Link.css" rel="stylesheet" />
     <title>Main page</title>
 </head>
 <body>
@@ -20,14 +21,7 @@
 
     </header>
     <nav>
-        <div class="menu">
-            <a href="index.html">Početna</a>
-            <a href="CreateQuestion.html">Postavi pitanje</a>
-            <a href="ViewQuestion.html">Pregled pitanja</a>
-            <a href="ViewProfile.html">Profil</a>
-            <a href="Login.html">Prijavi se</a>
-            <a href="Register.html">Registracija</a>
-        </div>
+        <?php include 'Menu.php';?>
         <input class="desno" id="search" type="search" />
         <label class="desno" for="search">Pretraga</label>
     </nav>
@@ -35,17 +29,18 @@
     <hr class="gornjiHr">
     <br>
     <br>
-    <form>
+
+    <form action="index.php" method="post" id="forma">
         <p class="naslovForme">Login</p>
         <table>
             <tr>
-                <td><label for="username" id="lusername">Username</label></td>
-                <td><input type="text" required id="username" onkeyup="validirajUsername()"></td>
+                <td><label  id="lusername">Username</label></td>
+                <td><input type="text" name="user" required onkeyup="validirajUsername()"></td>
             </tr>
 
             <tr>
-                <td><label for="pw" id="lpw">Password</label></td>
-                <td><input type="password" required id="pw" onkeyup="validirajPw()"></td>
+                <td><label id="lpw">Password</label></td>
+                <td><input type="password" name="password" required onkeyup="validirajPw()"></td>
             </tr>
             <tr>
                 <td>
@@ -57,9 +52,8 @@
                 <td colspan="2"><input type="submit" id="submit" onclick="validiraj()" value="Login"></td>
             </tr>
         </table>
+        <input type="hidden" value="login" name="aktivno"/>
         <br>
-
-
     </form>
 
     <footer class="partial">

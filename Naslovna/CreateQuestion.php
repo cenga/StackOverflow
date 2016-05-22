@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="en">
+<?php include 'SaveQuestion.php';?>
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="CreateQuestion.css" type="text/css" />
     <script src="CreateQuestion.js"></script>
+    <link href="Link.css" rel="stylesheet" />
     <title>Main page</title>
 </head>
 <body>
@@ -20,62 +21,41 @@
 
     </header>
     <nav>
-        <div class="menu">
-            <a href="index.html">Početna</a>
-            <a href="CreateQuestion.html">Postavi pitanje</a>
-            <a href="ViewQuestion.html">Pregled pitanja</a>
-            <a href="ViewProfile.html">Profil</a>
-            <a href="Login.html">Prijavi se</a>
-            <a href="Register.html">Registracija</a>
-        </div>
+        <?php include 'Menu.php';?>
         <input class="desno" id="search" type="search" />
         <label class="desno" for="search">Pretraga</label>
     </nav>
     <section>
         <br><br>
         <hr>
-        <form id="createQuestion">
+        <form id="createQuestion" method="post" action="CreateQuestion.php">
             <label for="naslov">Naslov</label>
-            <input type="text" id="naslov" onkeyup="validirajNaslov()" required>
+            <input type="text" id="naslov" name="title" onkeyup="validirajNaslov()" required>
             <br><br>
             Ovdje napišite pitanje<br>
             <div class="pitanje">
-                <textarea class="pitanjeTextBox" required autofocus form="createQuestion"></textarea>
+                <textarea class="pitanjeTextBox" name="pitanje" required autofocus form="createQuestion"></textarea>
             </div>
-            <div class="checkbox">
-                <table>
-                        <tr>
-                            <td>
-                        <input type="checkbox">C#
-                        </td>
-                        <td>
-                       <input type="checkbox">JAVA
-                        </td>
-                        <td>
-                        <input type="checkbox">.NET
-                        </td>
-                        <td>
-                        <input type="checkbox">SQL
-                        </td>
-                        <td>
-                        <input type="checkbox">CSS
-                        </td>
-                        <td>
-                        <input type="checkbox">Angular
-                        </td>
-                        <td>
-                        <input type="checkbox">HTML
-                        </td>
-                        <td>
-                        <input type="checkbox">AJAX
-                        </td>
-                        <td>
-                        <input type="checkbox">Cloud
-                        </td>
-                        </tr>
-                </table>
-            </div>
+            <select required class="mojSelect" name="skill">
+                <option>C#</option>
+                <option>HTML</option>
+                <option>SQL</option>
+                <option>ASP</option>
+                <option>JavaScript</option>
+                <option>C++</option>
+                <option>Angular JS</option>
+                <option>Botstrap</option>
+                <option>.NET</option>
+            </select>
+            <br /> <br />
+            <label>Kod</label>
+            <input type="text" required name="kod" />
+            <br />
+            <label>Broj</label>
+            <input type="tel" required onblur="validirajBroj()" name="broj" />
+            <br /> <br />
             <input type="submit" id="submit" value="Potvrdi unos">
+            <input type="hidden" value="value" name="novoPitanje"> 
         </form>
         <br><br>
     </section>

@@ -1,0 +1,37 @@
+﻿.mojLink {
+  font-weight: normal;
+  color: #337ab7;
+  border-radius: 0;
+}
+.menu input{
+    font-family: cursive;
+	font-size: 20px;
+}
+.mojLink,
+.mojLink:active,
+.mojLink.active,
+.mojLink[disabled],
+.mojLink {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.mojLink[disabled]:hover,
+.mojLink:hover,
+.mojLink[disabled]:focus,
+.mojLink:focus {
+  color: #777;
+  text-decoration: none;
+}
+.mojLink,
+.mojLink:hover,
+.mojLink:focus,
+.mojLink:active {
+  border-color: transparent;
+}
+.mojLink:hover,
+.mojLink:focus {
+  color: #23527c;
+  text-decoration: underline;
+  background-color: transparent;
+}

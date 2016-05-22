@@ -39,6 +39,9 @@ footer.table
 	width: 70%;
 	float: left;
 }
+.datum{
+    display: none;
+}
 .ikone
 {
 	width: 10%;	

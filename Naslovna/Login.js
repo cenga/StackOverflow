@@ -1,5 +1,5 @@
 ﻿validirajUsername = function () {
-    var username = document.getElementById("username");
+    var username = document.getElementsByName("username")[0];
 
     if (username.value.length < 2) {
         username.style.backgroundColor = "red";
@@ -10,7 +10,7 @@
 }
 
 validirajPw = function () {
-    var pw = document.getElementById("pw");
+    var pw = document.getElementsByName("pw")[0];
 
     if (pw.value.length < 5) {
         pw.style.backgroundColor = "red";
@@ -21,8 +21,8 @@ validirajPw = function () {
 }
 
 validiraj = function () {
-    var username = document.getElementById("username");
-    var pw = document.getElementById("pw");
+    var username = document.getElementsByName("username")[0]; 
+    var pw = document.getElementsByName("pw")[0];
 
     if (username.value.length < 3) {
         alert("Username mora imati barem 3 karaktera");

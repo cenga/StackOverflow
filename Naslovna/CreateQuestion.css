@@ -1,6 +1,6 @@
 ﻿select
 {
-    width: 7%;
+    width: 100px;
 }
 .ikone
 {
@@ -59,7 +59,7 @@ body
    background-color:silver;
    margin-bottom: -22px;
 }
-form
+#createQuestion
 {
 	background-color: aliceblue;
 }

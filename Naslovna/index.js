@@ -1,22 +1,25 @@
 ﻿var danasnjiDatum;
 var datumi;
 
+
 seed = function () {
     danasnjiDatum = new Date();
-    datumi = [
-        new Date(),
-        new Date(),
-        new Date(danasnjiDatum.getFullYear(), danasnjiDatum.getMonth(), danasnjiDatum.getDate(), 8, 50, 16, 0),
-        new Date(danasnjiDatum.getFullYear(), danasnjiDatum.getMonth(), danasnjiDatum.getDate(), 14, 25, 45, 0),
-        new Date(danasnjiDatum.getFullYear(), danasnjiDatum.getMonth(), danasnjiDatum.getDate() - 1, 23, 25, 7, 0),
-        new Date(danasnjiDatum.getFullYear(), danasnjiDatum.getMonth(), danasnjiDatum.getDate() - 4, 9, 25, 51, 0),
-        new Date(danasnjiDatum.getFullYear(), danasnjiDatum.getMonth(), danasnjiDatum.getDate() - 2, 15, 25, 38, 0),
-        new Date(danasnjiDatum.getFullYear(), danasnjiDatum.getMonth(), danasnjiDatum.getDate() - 3, 20, 35, 16, 0),
-        new Date(danasnjiDatum.getFullYear(), danasnjiDatum.getMonth(), danasnjiDatum.getDate() - 5, 20, 35, 16, 0),
-        new Date(danasnjiDatum.getFullYear(), danasnjiDatum.getMonth(), danasnjiDatum.getDate() - 7, 20, 35, 16, 0),
-        new Date(danasnjiDatum.getFullYear(), danasnjiDatum.getMonth() - 2, danasnjiDatum.getDate() - 1, 20, 35, 16, 0),
-        new Date(danasnjiDatum.getFullYear(), danasnjiDatum.getMonth(), danasnjiDatum.getDate() - 15, 20, 35, 16, 0),
-    ];
+    datumi = [];
+    var novosti = document.getElementsByClassName('datum');
+    
+    for (var i = 0; i < novosti.length; i++) {
+        novosti[i].style.display = 'inherit';
+        var datum = novosti[i].innerHTML;
+        var godina = datum.substring(0, 4);
+        var mjesec = Number(datum.substring(5, 7));
+        var dan = datum.substring(8, 10);
+        var sat = datum.substring(11, 13);
+        var minuta = datum.substring(14, 16);
+        var sekunda = datum.substring(17, 19);
+        datumi.push(new Date(godina, mjesec-1, dan, sat, minuta, sekunda, 0)); 
+    }
+
+
     ispisiVremenaObjave();
 }
 
@@ -172,7 +175,7 @@ odrediVrijemeObjave = function (date) {
         return "Novost objavljena prije " + String(proteklo) + tekst;
     }
     else {
-        return String(date.getDate() + "." + date.getMonth() + "." + date.getFullYear() + ".");
+        return String(date.getDate() + "." + String(Number(date.getMonth() + 1)) + "." + date.getFullYear() + ".");
     }
 
 }

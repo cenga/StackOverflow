@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="ViewQuestion.css" type="text/css" />
+    <link href="Link.css" rel="stylesheet" />
     <title>Main page</title>
 </head>
 <body>
@@ -19,14 +20,7 @@
 
     </header>
     <nav>
-        <div class="menu">
-            <a href="index.html">Početna</a>
-            <a href="CreateQuestion.html">Postavi pitanje</a>
-            <a href="ViewQuestion.html">Pregled pitanja</a>
-            <a href="ViewProfile.html">Profil</a>
-            <a href="Login.html">Prijavi se</a>
-            <a href="Register.html">Registracija</a>
-        </div>
+        <?php include 'Menu.php';?>
         <input class="desno" id="search" type="search" />
         <label class="desno" for="search">Pretraga</label>
     </nav>
