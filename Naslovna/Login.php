@@ -32,6 +32,7 @@
 
     <form action="index.php" method="post" id="forma">
         <p class="naslovForme">Login</p>
+        <h5>username i pw su: cenga</h5>
         <table>
             <tr>
                 <td><label  id="lusername">Username</label></td>
