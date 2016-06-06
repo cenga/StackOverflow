@@ -1,24 +1,25 @@
 <?php
-    $pitanja = file("Pitanja.csv");
+$veza = new PDO("mysql:dbname=spirala4;host=127.3.47.130;charset=utf8", "admin79xADN4", "XnzWJLm_gPwD");
+$veza->exec("set names utf8");
+$pitanja = $veza->query("select id, naslov, tekst, UNIX_TIMESTAMP(datum) vrijeme2, skill, FK_user from vijest order by datum desc");
+if (!$pitanja) {
+    $greska = $veza->errorInfo();
+    print "SQL greška: " . $greska[2];
+    exit();
+}
+
     class Vijest {
-        function Vijest($pitanje, $skill, $datum) {
+        function Vijest($pitanje, $skill, $datum, $id) {
             $this->pitanje = $pitanje;
             $this->skill = $skill;
             $this->datum = $datum;
+            $this->id = $id;
         }
     }
     $novosti = array();
-    for($i = 0; $i < count($pitanja); $i++)
+    foreach($pitanja as $pitanje)
     {
-        $novost = $pitanja[$i];
-        $prvi = strpos($novost, ",", 0) + 1;
-        $drugi = strpos($novost, ",", $prvi);
-        $treci = strpos($novost, ",", $drugi+1);
-        $naslov = str_replace("&amp;#44", ",", trim(substr($novost, 0, $prvi)));
-        $pitanje = str_replace("&amp;#44", ",", trim(substr($novost, $prvi, $drugi - $prvi)));
-        $skill = trim(substr($novost, $drugi+1, $treci - $drugi));
-        $datum = trim(substr($novost, $treci+1, strlen($novost) - $treci));
-        array_push($novosti, new Vijest($pitanje, $skill, $datum));
+        array_push($novosti, new Vijest($pitanje['tekst'], $pitanje['skill'], date("Y.m.d h:i:s", $pitanje['vrijeme2']), $pitanje['id']));
     }
 
     if (isset($_POST["poImenu"]) && $_POST["poImenu"] == 1){
@@ -32,20 +33,20 @@
     {
         $novost = $novosti[$i];
         $indeks = $i+1;
-        echo '<div class="novost">
+        echo '<form method="post" action="ShowQuestion.php"><div class="novost">
+                <input type="hidden" name="id" value="'.$novost->id.'" />
                 <span class="broj">'.$indeks.'</span>
                 <a href=""><img src="https://cdn1.iconfinder.com/data/icons/user-pictures/100/female1-128.png" alt="https://cdn2.iconfinder.com/data/icons/fatcow/32x32/http_status_not_found.png"  class="userSlika"></a>
-                <span class="pitanje">'.$novost->pitanje.'<br />
+                <span class="pitanje"><input type="submit" class="mojLink" value="'.$novost->pitanje.'" /><br />
                     <span class="datum">'.$novost->datum.'</span>
                 </span>
                 <span class="skill">'.$novost->skill.'</span>
                 <hr>
                 <br>
-            </div>';
+            </div></form>';
     }
 
     function poDatumu($p1, $p2){
-
         $a = $p1->datum;
         $b = $p2->datum;
 
@@ -69,7 +70,7 @@
 
         return $drugi > $prvi;
     }
-     function poImenu($a, $b)
+    function poImenu($a, $b)
      {
          return strtolower($a->pitanje) > strtolower($b->pitanje);
      }

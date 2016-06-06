@@ -9,21 +9,24 @@ include 'LoginKod.php';
                echo '<a href="CreateQuestion.php">Postavi pitanje</a>';
             }
 
-            echo '<a href="ViewQuestion.php">Pregled pitanja</a>';
-
             if($_SESSION["korisnikPrijavljen"]== true)
             {
                 echo '<a href="ViewProfile.php">Profil</a>';
             }
 
-            if($_SESSION["korisnikPrijavljen"]== false)
+            if($_SESSION["korisnikPrijavljen"]== true)
             {
-            echo '<a href="Login.php">Prijavi se</a>';
+                echo '<a href="IzmjenaPassworda.php">Promijeni password</a>';
             }
 
             if($_SESSION["korisnikPrijavljen"]== false)
             {
-                echo '<a href="Register.php">Registracija</a>';
+                echo '<a href="Login.php">Prijavi se</a>';
+            }
+
+            if($_SESSION["korisnikPrijavljen"]== true && isset($_SESSION["id"]) && $_SESSION['id'] == 1)
+            {
+                echo '<a href="Register.php">Registracija novog autora</a>';
             }
 
             if($_SESSION["korisnikPrijavljen"]== true)

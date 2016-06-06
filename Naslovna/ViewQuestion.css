@@ -1,4 +1,7 @@
-﻿.pitanjeTextBox
+﻿.sakriveno, #unosForma{
+    display: none;
+}
+.pitanjeTextBox
 {
 	font-family: sans-serif;
 	padding: 2px;
@@ -45,7 +48,6 @@
 }
 .main
 {
-    float: left;
     width: 70%;
 }
 .comment

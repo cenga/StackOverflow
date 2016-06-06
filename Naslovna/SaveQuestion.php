@@ -91,15 +91,24 @@ function validiraj(){
 }
 
 function spasiPitanje(){
-    $datoteka = "Pitanja.csv";
-    $podaci = file($datoteka);
-    $naslov = str_replace(",", "&#44", $_POST["title"]);
-    $pitanje = str_replace(",", "&#44", $_POST["pitanje"]);
-    $skill = str_replace(",", "&#44", $_POST["skill"]);
+    $veza = new PDO("mysql:dbname=spirala4;host=127.3.47.130;charset=utf8", "admin79xADN4", "XnzWJLm_gPwD");
+    $veza->exec("set names utf8");
+    $komentari = 1;
+    if(!$_POST["komentari"])
+    {
+        $komentari = 0;
+    }
+    session_start();
+    $q = "INSERT INTO vijest SET Naslov='".$_POST["title"]."', Tekst='".$_POST["pitanje"]."',Skill='".$_POST["skill"]."',DozvoljeniKomentari='".$komentari."',FK_user=".$_SESSION['id'].", datum=NOW()";
+    $rez = $veza->exec($q);
 
-    $noviRed = htmlentities($naslov.", ".$pitanje.", ".$skill.",".date('Y.m.d H:i:s')."\n", ENT_QUOTES);
-    array_push($podaci, $noviRed);
-    file_put_contents($datoteka, $podaci);
+    if($rez == 0)
+    {
+        $greska = $veza->errorInfo();
+        echo '<script language="javascript">';
+        echo 'alert("SQL greška: '.$greska[2].'")';
+        echo '</script>';
+    }
 
     echo '<script language="javascript">';
     echo 'alert("Pitanje uspjesno spaseno")';

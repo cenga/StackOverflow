@@ -54,6 +54,9 @@
             <label>Broj</label>
             <input type="tel" required onblur="validirajBroj()" name="broj" />
             <br /> <br />
+            <label>Omoguci komentare</label>
+            <input type="checkbox" checked name="komentari" />
+            <br /> <br />
             <input type="submit" id="submit" value="Potvrdi unos">
             <input type="hidden" value="value" name="novoPitanje"> 
         </form>

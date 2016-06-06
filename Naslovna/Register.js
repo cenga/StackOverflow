@@ -12,26 +12,12 @@
     }
 }
 
-validirajEmail = function () {
-    var re = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-    var email = document.getElementById("email");
-
-    if (!re.test(email.value)) {
-        email.style.backgroundColor = "red"
-        return false;
-    }
-    else {
-        email.style.backgroundColor = "white";
-        return true;
-    }
-}
-
 validirajPw = function () {
     var pw = document.getElementById("pw");
     var cpw = document.getElementById("cpw");
     var vrijednost = false;
 
-    if (pw.value.length < 5) {
+    if (pw.value.length < 2) {
         pw.style.backgroundColor = "red";
         vrijednost = false;
     }
@@ -57,7 +43,7 @@ validirajCpw = function () {
     var cpw = document.getElementById("cpw");
     var vrijednost = false;
 
-    if (cpw.value.length < 5) {
+    if (cpw.value.length < 2) {
         cpw.style.backgroundColor = "red";
         vrijednost = false;
     }

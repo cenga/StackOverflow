@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
+<?php include 'UnosAutora.php'; ?>
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="Login.css" type="text/css" />
@@ -29,22 +30,22 @@
     <hr class="gornjiHr">
     <br>
     <br>
-    <form id="forma">
+    <form id="forma" method="post" action="Register.php">
         <p class="naslovForme">Registracija</p>
         <table>
             <tr>
                 <td><label for="ime" id="lime">Ime</label></td>
-                <td><input type="text" required id="ime" onkeyup="validirajIme()"></td>
+                <td><input type="text" required id="ime" name="name" onkeyup="validirajIme()"></td>
             </tr>
 
             <tr>
-                <td><label for="email" id="lprezime">Email</label></td>
-                <td><input type="text" required id="email" onkeyup="validirajEmail()"></td>
+                <td><label for="email" id="lprezime">Username</label></td>
+                <td><input type="text" required id="email" name="username"></td>
             </tr>
 
             <tr>
                 <td><label>Password</label></td>
-                <td><input type="password" onkeyup="validirajPw()" id="pw"></td>
+                <td><input type="password" onkeyup="validirajPw()" id="pw" name="pass"></td>
             </tr>
 
             <tr>
